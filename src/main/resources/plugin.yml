@@ -1,0 +1,28 @@
+name: ChestShop
+version: '${project.version}'
+main: org.achymake.chestshop.ChestShop
+api-version: '1.21'
+prefix: '${project.name}'
+depend:
+  - Vault
+author: AchyMake
+description: '${project.description}'
+website: '${project.url}'
+commands:
+  chestshop:
+    description: main command
+    permission: chestshop.command.chestshop
+    permission-message: You do not have the permission to execute the command
+permissions:
+  chestshop.command.chestshop:
+    description: main command
+    default: op
+  chestshop.command.chestshop.reload:
+    description: reload config
+    default: op
+  chestshop.event.create:
+    description: create shop
+    default: op
+  chestshop.event.join.update:
+    description: get update on join event
+    default: op
