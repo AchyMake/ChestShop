@@ -78,7 +78,7 @@ public record SignHandler(Sign getSign) {
                 var item = inventory.getItem(inventory.first(getMaterial()));
                 if (item != null) {
                     var result = item.getAmount() - getAmount();
-                    if (result >= item.getAmount()) {
+                    if (item.getAmount() >= result) {
                         item.setAmount(result);
                         return true;
                     } else return false;
